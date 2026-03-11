@@ -6,12 +6,12 @@ Four new tasks added to the CoderGym MLtasks collection, following the `pytorch_
 
 ## Tasks
 
-| Task ID | Description | Architecture |
-|---|---|---|
-| `cnn_lvl1_image_classifier` | Multi-class classification of synthetic geometric shape images | Conv2d + BatchNorm2d + MaxPool2d → FC head |
-| `rnn_lvl1_text_sentiment` | 3-class sentiment classification on synthetic token sequences | Bidirectional LSTM → Mean Pool → FC |
-| `transfer_lvl1_feature_extraction` | Transfer learning — pre-train backbone, freeze, fine-tune on target task | 3-block MLP backbone + swappable FC head |
-| `batchnorm_dropout_lvl1_regularization` | Ablation study comparing 4 MLP regularisation variants on regression | MLP — Baseline / Dropout / BatchNorm / BN+Dropout |
+| Task ID | Description | Dataset | Architecture |
+|---|---|---|---|
+| `cnn_lvl1_image_classifier` | Multi-class classification of geometric shape images | Synthetic 32×32 grayscale images — circle, square, triangle, cross | Conv2d + BatchNorm2d + MaxPool2d → FC head |
+| `rnn_lvl1_text_sentiment` | 3-class sentiment classification on token sequences | Synthetic variable-length token sequences (Negative / Neutral / Positive) | Bidirectional LSTM → Mean Pool → FC |
+| `transfer_lvl1_feature_extraction` | Pre-train backbone, freeze, fine-tune on target task | Synthetic Gaussian blobs — 10-class source, 4-class target | 3-block MLP backbone + swappable FC head |
+| `batchnorm_dropout_lvl1_regularization` | Ablation study comparing 4 MLP regularisation variants | Synthetic noisy tabular data (50 features, 15 informative) | MLP — Baseline / Dropout / BatchNorm / BN+Dropout |
 
 ---
 
